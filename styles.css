@@ -80,9 +80,10 @@ a {
 .hero h1 {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: clamp(3rem, 7vw, 7rem);
+  max-width: 1120px;
+  font-size: clamp(2.6rem, 5.6vw, 6.2rem);
   font-weight: 300;
-  line-height: 0.95;
+  line-height: 1;
 }
 
 .hero p {
@@ -155,6 +156,8 @@ a {
 .catalog-heading div {
   display: flex;
   flex-direction: column-reverse;
+  align-items: flex-start;
+  order: 1;
 }
 
 .catalog-heading p {
@@ -172,6 +175,7 @@ a {
 }
 
 .catalog-heading a {
+  order: 2;
   color: var(--muted);
   font-size: 0.95rem;
   font-weight: 300;
