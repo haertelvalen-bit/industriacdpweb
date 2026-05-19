@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CDP | Reservar cita previa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="page-header">
+        <a class="brand" href="index.html">CDP</a>
+        <nav class="main-nav" aria-label="Navegacion principal">
+          <a href="index.html#productos">Productos</a>
+          <a href="index.html#donde-estamos">Donde estamos</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </header>
+
+      <section class="form-page">
+        <a class="back-link" href="contacto.html">Volver</a>
+        <form class="contact-form" action="mailto:hola@mesaspapa.com" method="post" enctype="text/plain">
+          <h1>Reservar cita previa</h1>
+          <label>
+            Nombre y apellido
+            <input type="text" name="Nombre" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="Email" required />
+          </label>
+          <label>
+            Telefono
+            <input type="tel" name="Telefono" required />
+          </label>
+          <label>
+            Dia preferido
+            <input type="date" name="Dia preferido" />
+          </label>
+          <label>
+            Comentarios
+            <textarea name="Comentarios" rows="5"></textarea>
+          </label>
+          <button type="submit">Solicitar cita</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

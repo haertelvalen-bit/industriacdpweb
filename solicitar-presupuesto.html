@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CDP | Solicitar presupuesto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="page-header">
+        <a class="brand" href="index.html">CDP</a>
+        <nav class="main-nav" aria-label="Navegacion principal">
+          <a href="index.html#productos">Productos</a>
+          <a href="index.html#donde-estamos">Donde estamos</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </header>
+
+      <section class="form-page">
+        <a class="back-link" href="contacto.html">Volver</a>
+        <form class="contact-form" action="mailto:hola@mesaspapa.com" method="post" enctype="text/plain">
+          <h1>Solicitar presupuesto</h1>
+          <label>
+            Nombre y apellido
+            <input type="text" name="Nombre" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="Email" required />
+          </label>
+          <label>
+            Telefono
+            <input type="tel" name="Telefono" />
+          </label>
+          <label>
+            Producto o cantidad de mesas
+            <input id="producto-consulta" type="text" name="Producto o cantidad" />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="Mensaje" rows="5" required></textarea>
+          </label>
+          <button type="submit">Enviar consulta</button>
+        </form>
+      </section>
+    </main>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const producto = params.get("producto");
+      const input = document.querySelector("#producto-consulta");
+
+      if (producto && input) {
+        input.value = producto;
+      }
+    </script>
+  </body>
+</html>
