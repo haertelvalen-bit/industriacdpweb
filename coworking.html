@@ -16,6 +16,10 @@
     <main>
       <header class="page-header">
         <a class="brand" href="index.html">CDP</a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
         <nav class="main-nav" aria-label="Navegacion principal">
           <a href="index.html#productos">Productos</a>
           <a href="index.html#donde-estamos">Donde estamos</a>
@@ -34,33 +38,41 @@
 
         <div class="catalog" aria-label="Mesas coworking">
           <article class="catalog-card">
-            <div class="catalog-image">
-              <img src="public/imagen8.png" alt="Mesa de oficina Work" />
+            <div class="catalog-image product-carousel" data-carousel>
+              <img class="active" src="public/4patas1.JPG" alt="Mesa Omega vista 1" />
+              <img src="public/4patas2.JPG" alt="Mesa Omega vista 2" />
+              <img src="public/4patas3.JPG" alt="Mesa Omega vista 3" />
               <span>Tarifa empresas</span>
+              <button class="carousel-arrow prev" type="button" aria-label="Foto anterior"></button>
+              <button class="carousel-arrow next" type="button" aria-label="Foto siguiente"></button>
             </div>
             <div class="catalog-info">
               <div>
-                <h2>Mesa pata ancha</h2>
-                <p>Base de hierro y tapa de melamina para espacios compartidos</p>
+                <h2>Omega</h2>
+                <p>Patas cerradas, base de hierro y tapa de melamina</p>
               </div>
               <span class="colors">+ colores</span>
             </div>
-            <a class="product-consult" href="solicitar-presupuesto.html?producto=Mesa%20pata%20ancha">Consultar</a>
+            <a class="product-consult" href="solicitar-presupuesto.html?producto=Omega">Consultar</a>
           </article>
 
           <article class="catalog-card">
-            <div class="catalog-image">
-              <img src="public/imagen9.png" alt="Mesa de oficina Kube" />
+            <div class="catalog-image product-carousel" data-carousel>
+              <img class="active" src="public/mesa1.JPG" alt="Mesa Prisma vista 1" />
+              <img src="public/mesa2.JPG" alt="Mesa Prisma vista 2" />
+              <img src="public/mesa3.JPG" alt="Mesa Prisma vista 3" />
               <span>Tarifa empresas</span>
+              <button class="carousel-arrow prev" type="button" aria-label="Foto anterior"></button>
+              <button class="carousel-arrow next" type="button" aria-label="Foto siguiente"></button>
             </div>
             <div class="catalog-info">
               <div>
-                <h2>Mesa otra pata</h2>
-                <p>Diseño alternativo con estructura de hierro y tapa de melamina</p>
+                <h2>Prisma</h2>
+                <p>Mesa de 4 patas con base de hierro y tapa de melamina</p>
               </div>
               <span class="colors">+ colores</span>
             </div>
-            <a class="product-consult" href="solicitar-presupuesto.html?producto=Mesa%20otra%20pata">Consultar</a>
+            <a class="product-consult" href="solicitar-presupuesto.html?producto=Prisma">Consultar</a>
           </article>
         </div>
       </section>
@@ -83,5 +95,7 @@
         <p class="copyright">© 2026 CDP. Todos los derechos reservados.</p>
       </footer>
     </main>
+    <script src="nav.js"></script>
+    <script src="carousel.js"></script>
   </body>
 </html>

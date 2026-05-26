@@ -16,6 +16,10 @@
     <main>
       <header class="page-header">
         <a class="brand" href="index.html">CDP</a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
         <nav class="main-nav" aria-label="Navegacion principal">
           <a href="index.html#productos">Productos</a>
           <a href="index.html#donde-estamos">Donde estamos</a>
@@ -27,38 +31,30 @@
         <div class="catalog-heading">
           <a href="index.html#productos">Volver</a>
           <div>
-            <p>2 productos</p>
+            <p>1 producto</p>
             <h1>Escritorios</h1>
           </div>
         </div>
 
-        <div class="catalog compact-catalog" aria-label="Escritorios">
+        <div class="catalog single-product" aria-label="Escritorios">
           <article class="catalog-card">
-            <div class="catalog-image">
+            <div class="catalog-image product-carousel" data-carousel>
+              <img class="active" src="public/escritorio1.JPG" alt="Escritorio vista 1" />
+              <img src="public/escritorio2.JPG" alt="Escritorio vista 2" />
+              <img src="public/escritorio3.JPG" alt="Escritorio vista 3" />
+              <img src="public/escritorio4.JPG" alt="Escritorio vista 4" />
               <span>Disponible</span>
+              <button class="carousel-arrow prev" type="button" aria-label="Foto anterior"></button>
+              <button class="carousel-arrow next" type="button" aria-label="Foto siguiente"></button>
             </div>
             <div class="catalog-info">
               <div>
-                <h2>Escritorio pata ancha</h2>
+                <h2>Escritorio</h2>
                 <p>Base de hierro y tapa de melamina para trabajo diario</p>
               </div>
               <span class="colors">+ colores</span>
             </div>
-            <a class="product-consult" href="solicitar-presupuesto.html?producto=Escritorio%20pata%20ancha">Consultar</a>
-          </article>
-
-          <article class="catalog-card">
-            <div class="catalog-image">
-              <span>Disponible</span>
-            </div>
-            <div class="catalog-info">
-              <div>
-                <h2>Escritorio otra pata</h2>
-                <p>Diseño alternativo para oficinas, estudios y home office</p>
-              </div>
-              <span class="colors">+ colores</span>
-            </div>
-            <a class="product-consult" href="solicitar-presupuesto.html?producto=Escritorio%20otra%20pata">Consultar</a>
+            <a class="product-consult" href="solicitar-presupuesto.html?producto=Escritorio">Consultar</a>
           </article>
         </div>
       </section>
@@ -81,5 +77,7 @@
         <p class="copyright">© 2026 CDP. Todos los derechos reservados.</p>
       </footer>
     </main>
+    <script src="nav.js"></script>
+    <script src="carousel.js"></script>
   </body>
 </html>

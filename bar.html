@@ -16,6 +16,10 @@
     <main>
       <header class="page-header">
         <a class="brand" href="index.html">CDP</a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
         <nav class="main-nav" aria-label="Navegacion principal">
           <a href="index.html#productos">Productos</a>
           <a href="index.html#donde-estamos">Donde estamos</a>
@@ -27,38 +31,67 @@
         <div class="catalog-heading">
           <a href="index.html#productos">Volver</a>
           <div>
-            <p>2 productos</p>
+            <p>3 productos</p>
             <h1>Mesas de bar</h1>
           </div>
         </div>
 
-        <div class="catalog compact-catalog" aria-label="Mesas de bar">
+        <div class="catalog three-products" aria-label="Mesas de bar">
           <article class="catalog-card">
-            <div class="catalog-image">
+            <div class="catalog-image product-carousel" data-carousel>
+              <img class="active" src="public/delta1.JPG" alt="Mesa Delta vista 1" />
+              <img src="public/delta2.JPG" alt="Mesa Delta vista 2" />
+              <img src="public/delta3.JPG" alt="Mesa Delta vista 3" />
               <span>Disponible</span>
+              <button class="carousel-arrow prev" type="button" aria-label="Foto anterior"></button>
+              <button class="carousel-arrow next" type="button" aria-label="Foto siguiente"></button>
             </div>
             <div class="catalog-info">
               <div>
-                <h2>Mesa bar pata ancha</h2>
-                <p>Base de hierro y tapa de melamina para espacios comerciales</p>
+                <h2>Delta</h2>
+                <p>Mesa de bar con base de hierro y tapa de melamina</p>
               </div>
               <span class="colors">+ colores</span>
             </div>
-            <a class="product-consult" href="solicitar-presupuesto.html?producto=Mesa%20bar%20pata%20ancha">Consultar</a>
+            <a class="product-consult" href="solicitar-presupuesto.html?producto=Delta">Consultar</a>
           </article>
 
           <article class="catalog-card">
-            <div class="catalog-image">
+            <div class="catalog-image product-carousel" data-carousel>
+              <img class="active" src="public/gamma1.JPG" alt="Mesa Gamma vista 1" />
+              <img src="public/gamma2.JPG" alt="Mesa Gamma vista 2" />
+              <img src="public/gamma3.JPG" alt="Mesa Gamma vista 3" />
               <span>Disponible</span>
+              <button class="carousel-arrow prev" type="button" aria-label="Foto anterior"></button>
+              <button class="carousel-arrow next" type="button" aria-label="Foto siguiente"></button>
             </div>
             <div class="catalog-info">
               <div>
-                <h2>Mesa bar otra pata</h2>
-                <p>Diseño alternativo para bares, cafeterias y comedores</p>
+                <h2>Gamma</h2>
+                <p>Mesa de bar con base de hierro y tapa de melamina</p>
               </div>
               <span class="colors">+ colores</span>
             </div>
-            <a class="product-consult" href="solicitar-presupuesto.html?producto=Mesa%20bar%20otra%20pata">Consultar</a>
+            <a class="product-consult" href="solicitar-presupuesto.html?producto=Gamma">Consultar</a>
+          </article>
+
+          <article class="catalog-card">
+            <div class="catalog-image product-carousel" data-carousel>
+              <img class="active" src="public/sigma1.jpg" alt="Mesa Sigma vista 1" />
+              <img src="public/sigma2.JPG" alt="Mesa Sigma vista 2" />
+              <img src="public/sigma3.JPG" alt="Mesa Sigma vista 3" />
+              <span>Disponible</span>
+              <button class="carousel-arrow prev" type="button" aria-label="Foto anterior"></button>
+              <button class="carousel-arrow next" type="button" aria-label="Foto siguiente"></button>
+            </div>
+            <div class="catalog-info">
+              <div>
+                <h2>Sigma</h2>
+                <p>Mesa de bar con base de hierro y tapa de melamina</p>
+              </div>
+              <span class="colors">+ colores</span>
+            </div>
+            <a class="product-consult" href="solicitar-presupuesto.html?producto=Sigma">Consultar</a>
           </article>
         </div>
       </section>
@@ -81,5 +114,7 @@
         <p class="copyright">© 2026 CDP. Todos los derechos reservados.</p>
       </footer>
     </main>
+    <script src="nav.js"></script>
+    <script src="carousel.js"></script>
   </body>
 </html>
