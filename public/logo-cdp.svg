@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 220" role="img" aria-labelledby="title">
+  <title id="title">CDP</title>
+  <defs>
+    <linearGradient id="blue" x1="28" x2="240" y1="36" y2="184" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9fc4ff" />
+      <stop offset="1" stop-color="#6d96dd" />
+    </linearGradient>
+  </defs>
+  <circle cx="120" cy="110" r="82" fill="none" stroke="url(#blue)" stroke-width="12" />
+  <path
+    d="M72 92c20-24 44-28 68-10 26 20 48 34 86 17"
+    fill="none"
+    stroke="url(#blue)"
+    stroke-linecap="round"
+    stroke-width="12"
+  />
+  <path
+    d="M72 122c20-24 44-28 68-10 26 20 48 34 86 17"
+    fill="none"
+    stroke="url(#blue)"
+    stroke-linecap="round"
+    stroke-width="12"
+  />
+  <path
+    d="M72 152c20-24 44-28 68-10 26 20 48 34 86 17"
+    fill="none"
+    stroke="url(#blue)"
+    stroke-linecap="round"
+    stroke-width="12"
+  />
+  <text
+    x="280"
+    y="153"
+    fill="#2b2c30"
+    font-family="Helvetica, Arial, sans-serif"
+    font-size="104"
+    font-weight="300"
+    letter-spacing="18"
+  >CDP</text>
+</svg>

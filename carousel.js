@@ -12,6 +12,15 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     });
   }
 
-  previous?.addEventListener("click", () => show(current - 1));
-  next?.addEventListener("click", () => show(current + 1));
+  previous?.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    show(current - 1);
+  });
+
+  next?.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    show(current + 1);
+  });
 });

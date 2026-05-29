@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CDP | Mesas de coworking</title>
+    <title>Industria CDP | Muebles industriales</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,77 +14,231 @@
   </head>
   <body>
     <main>
-      <section class="hero" aria-label="CDP">
-        <header class="topbar">
-          <a class="brand" href="#">CDP</a>
-          <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <section class="hero home-hero" aria-label="Industria CDP">
+        <header class="topbar home-topbar">
+          <a class="brand home-brand" href="index.html">
+            <img src="public/logo-cdp.svg" alt="CDP" />
+          </a>
+          <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
             <span></span>
             <span></span>
           </button>
-          <nav class="main-nav" aria-label="Navegacion principal">
-            <a href="#productos">Productos</a>
-            <a href="#donde-estamos">Donde estamos</a>
+          <nav class="main-nav home-nav" aria-label="Navegación principal">
+            <a href="productos.html">Productos</a>
+            <a href="sobre-nosotros.html">Sobre nosotros</a>
             <a href="contacto.html">Contacto</a>
           </nav>
+          <a class="hero-quote" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
         </header>
 
-        <div class="hero-content">
-          <h1>Diseñá espacios donde las ideas se encuentran</h1>
-          <p>Mesas funcionales, resistentes y pensadas para trabajar mejor todos los dias.</p>
-          <a class="button" href="#productos">Ver productos</a>
+        <div class="home-hero-content">
+          <p>Muebles industriales</p>
+          <h1>Diseñamos espacios que trabajan con vos.</h1>
+          <span>
+            Muebles funcionales, resistentes y atemporales para oficinas, comercios y espacios de
+            trabajo.
+          </span>
+          <a class="home-button" href="productos.html">Ver productos</a>
         </div>
       </section>
 
-      <section class="products" id="productos" aria-label="Productos">
-        <a class="product-card" href="coworking.html">
-          <img src="public/image4.png" alt="Mesa coworking" />
-          <span>Mesas coworking</span>
-        </a>
-        <a class="product-card" href="escritorios.html">
-          <img src="public/imagen5.png" alt="Escritorio" />
-          <span>Escritorios</span>
-        </a>
-        <a class="product-card" href="bar.html">
-          <img src="public/image7.png" alt="Mesa de bar" />
-          <span>Mesas de bar</span>
-        </a>
-      </section>
-
-      <section class="location" id="donde-estamos" aria-label="Donde estamos">
-        <div class="location-copy">
-          <p>Donde estamos</p>
-          <h2>Visitanos</h2>
-          <span>Juncal 2928, Martinez, Buenos Aires, Argentina</span>
-          <a href="mailto:hola@mesaspapa.com">hola@mesaspapa.com</a>
-        </div>
-        <div class="map-placeholder" aria-label="Mapa de Juncal 2928, Martinez">
-          <iframe
-            title="Mapa de CDP en Juncal 2928, Martinez"
-            src="https://www.google.com/maps?q=Juncal%202928%2C%20Mart%C3%ADnez%2C%20Buenos%20Aires%2C%20Argentina&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </section>
-
-      <footer class="footer">
+      <section class="home-marquee" aria-label="Datos destacados de Industria CDP">
         <div>
-          <strong>CDP</strong>
-          <p>Mesas para coworking, escritorios y espacios de bar.</p>
+          <span>+10 años de experiencia</span>
+          <span>Producción nacional</span>
+          <span>Muebles industriales a medida</span>
+          <span>Atención personalizada</span>
+          <span>+500 proyectos realizados</span>
+          <span>Calidad pensada para durar</span>
+        </div>
+        <div aria-hidden="true">
+          <span>+10 años de experiencia</span>
+          <span>Producción nacional</span>
+          <span>Muebles industriales a medida</span>
+          <span>Atención personalizada</span>
+          <span>+500 proyectos realizados</span>
+          <span>Calidad pensada para durar</span>
+        </div>
+      </section>
+
+      <section class="product-showcase" id="productos" aria-label="Productos">
+        <div class="product-toolbar" aria-label="Filtros de productos">
+          <div class="category-tabs">
+            <span>Categorías</span>
+            <a class="active" href="productos.html" data-filter="all">Todos los productos</a>
+            <a href="productos.html#mesas-coworking" data-filter="coworking">Mesas coworking</a>
+            <a href="productos.html#escritorios" data-filter="escritorios">Escritorios</a>
+            <a href="productos.html#mesas-de-bar" data-filter="bar">Mesas de bar</a>
+          </div>
+          <div class="finish-filter">
+            <span>Filtrar por acabado</span>
+            <i class="finish natural"></i>
+            <i class="finish walnut"></i>
+            <i class="finish dark"></i>
+            <i class="finish white"></i>
+          </div>
+        </div>
+
+        <div class="product-family large-family" data-category="coworking">
+          <div class="family-heading">
+            <h3>Mesas coworking</h3>
+          </div>
+          <div class="family-grid coworking-grid">
+            <a class="mini-product-card" href="producto.html?producto=omega">
+              <img src="public/mesas omega/WhatsApp Image 2026-05-27 at 20.58.15.jpeg" alt="Mesa coworking Omega" />
+              <div>
+                <h4>Omega</h4>
+                <p>Patas cerradas</p>
+              </div>
+            </a>
+            <a class="mini-product-card" href="producto.html?producto=prisma">
+              <img src="public/mesas prisma/WhatsApp Image 2026-05-27 at 20.56.53.jpeg" alt="Mesa coworking Prisma" />
+              <div>
+                <h4>Prisma</h4>
+                <p>4 patas</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="split-families">
+          <div class="product-family" data-category="escritorios">
+            <div class="family-heading">
+              <h3>Escritorios</h3>
+            </div>
+            <div class="family-grid small-grid">
+              <a class="mini-product-card" href="producto.html?producto=escritorio">
+                <img src="public/escritorio1.JPG" alt="Escritorio simple" />
+                <div>
+                  <h4>Escritorio</h4>
+                  <p>Trabajo diario</p>
+                </div>
+              </a>
+              <a class="mini-product-card" href="producto.html?producto=gerencial">
+                <img src="public/gerencialesL.jpeg" alt="Escritorio gerencial" />
+                <div>
+                  <h4>Gerencial</h4>
+                  <p>Línea L</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-family" data-category="bar">
+            <div class="family-heading">
+              <h3>Mesas de bar</h3>
+            </div>
+            <div class="family-grid small-grid">
+              <a class="mini-product-card" href="producto.html?producto=delta">
+                <img src="public/delta1.JPG" alt="Mesa de bar Delta" />
+                <div>
+                  <h4>Delta</h4>
+                  <p>Bar y cafetería</p>
+                </div>
+              </a>
+              <a class="mini-product-card" href="producto.html?producto=gamma">
+                <img src="public/gamma1.JPG" alt="Mesa de bar Gamma" />
+                <div>
+                  <h4>Gamma</h4>
+                  <p>Uso comercial</p>
+                </div>
+              </a>
+              <a class="mini-product-card" href="producto.html?producto=sigma">
+                <img src="public/sigma1.jpg" alt="Mesa de bar Sigma" />
+                <div>
+                  <h4>Sigma</h4>
+                  <p>Alta resistencia</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-values" aria-label="Valores">
+        <article>
+          <svg class="value-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 3 5 6v5c0 4.7 3 8.6 7 10 4-1.4 7-5.3 7-10V6z" />
+            <path d="m9.5 12 1.8 1.8 3.7-4" />
+          </svg>
+          <h3>Calidad industrial</h3>
+          <p>Materiales seleccionados y procesos de fabricación pensados para durar.</p>
+        </article>
+        <article>
+          <svg class="value-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m4 20 4.6-1.2L19.7 7.7a2.2 2.2 0 0 0 0-3.1l-.3-.3a2.2 2.2 0 0 0-3.1 0L5.2 15.4z" />
+            <path d="m14.8 5.8 3.4 3.4" />
+            <path d="M12 20h8" />
+          </svg>
+          <h3>Diseño funcional</h3>
+          <p>Líneas simples y versátiles que se adaptan a cualquier espacio.</p>
+        </article>
+        <article>
+          <svg class="value-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M3 21h18" />
+            <path d="M5 21V9l5 3V9l5 3V5h4v16" />
+            <path d="M8 17h2M13 17h2M18 17h1" />
+          </svg>
+          <h3>Producción propia</h3>
+          <p>Fabricamos en Argentina con estándares de calidad y atención al detalle.</p>
+        </article>
+        <article>
+          <svg class="value-icon" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M16 11a4 4 0 1 0-8 0" />
+            <path d="M4 21a8 8 0 0 1 16 0" />
+            <path d="M18 8a3 3 0 0 1 0 6" />
+            <path d="M22 21a6 6 0 0 0-4-5.7" />
+          </svg>
+          <h3>Atención personalizada</h3>
+          <p>Te acompañamos en cada etapa de tu proyecto.</p>
+        </article>
+      </section>
+
+      <section class="home-about" id="sobre-nosotros" aria-label="Sobre nosotros">
+        <div class="home-about-copy">
+          <h2>Muebles que combinan diseño, resistencia y funcionalidad.</h2>
+          <span>
+            Creemos en lo simple, bien hecho. Creamos muebles industriales que hacen más cómodos,
+            organizados y productivos los espacios de trabajo y encuentro.
+          </span>
+          <a href="sobre-nosotros.html">Conocé más sobre nosotros</a>
+        </div>
+        <img src="public/primeraimagen.JPG" alt="Mesa industrial en espacio de trabajo" />
+      </section>
+
+      <section class="home-stats" id="proyectos" aria-label="Datos de Industria CDP">
+        <div><strong>+10 años</strong><span>de experiencia</span></div>
+        <div><strong>100%</strong><span>producción nacional</span></div>
+        <div><strong>+500</strong><span>proyectos realizados</span></div>
+        <div><strong>Materiales</strong><span>de primera calidad</span></div>
+      </section>
+
+      <footer class="footer home-footer">
+        <div>
+          <a class="brand footer-brand" href="index.html"><img src="public/logo-cdp.svg" alt="CDP" /></a>
+          <p>Muebles industriales diseñados y fabricados en Argentina.</p>
         </div>
         <nav aria-label="Productos">
-          <a href="coworking.html">Mesas coworking</a>
-          <a href="escritorios.html">Escritorios</a>
-          <a href="bar.html">Mesas de bar</a>
+          <strong>Productos</strong>
+          <a href="productos.html#mesas-coworking">Mesas coworking</a>
+          <a href="productos.html#escritorios">Escritorios</a>
+          <a href="productos.html#mesas-de-bar">Mesas de bar</a>
         </nav>
-        <nav aria-label="Contacto">
-          <a href="tel:0034652183235">0034 652 18 32 35</a>
-          <a href="mailto:hola@mesaspapa.com">hola@mesaspapa.com</a>
+        <nav aria-label="Empresa">
+          <strong>Empresa</strong>
+          <a href="sobre-nosotros.html">Sobre nosotros</a>
           <a href="contacto.html">Contacto</a>
         </nav>
-        <p class="copyright">© 2026 CDP. Todos los derechos reservados.</p>
+        <nav aria-label="Contacto">
+          <strong>¿Hablamos de tu proyecto?</strong>
+          <a href="https://wa.me/5491140742596" target="_blank" rel="noopener">+54 9 11 4074 2596</a>
+          <a class="instagram-link" href="https://www.instagram.com/industriacdp" target="_blank" rel="noopener">Instagram · @industriacdp</a>
+          <a class="footer-cta" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
+        </nav>
+        <p class="copyright">© 2026 Industria CDP. Todos los derechos reservados.</p>
       </footer>
     </main>
     <script src="nav.js"></script>
+    <script src="product-filter.js"></script>
   </body>
 </html>

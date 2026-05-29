@@ -3,13 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CDP | Solicitar presupuesto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <title>CDP | Proyectos</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -30,32 +24,24 @@
         <a class="header-quote" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
       </header>
 
-      <section class="form-page">
-        <a class="back-link" href="contacto.html">Volver</a>
-        <form class="contact-form">
-          <h1>Solicitar presupuesto</h1>
-          <label>
-            Nombre y apellido
-            <input type="text" name="Nombre" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="Email" required />
-          </label>
-          <label>
-            Teléfono
-            <input type="tel" name="Teléfono" />
-          </label>
-          <label>
-            Producto o cantidad de mesas
-            <input id="producto-consulta" type="text" name="Producto o cantidad" />
-          </label>
-          <label>
-            Mensaje
-            <textarea name="Mensaje" rows="5" required></textarea>
-          </label>
-          <button type="submit">Enviar por WhatsApp</button>
-        </form>
+      <section class="projects-page" aria-label="Proyectos">
+        <div>
+          <p>Proyectos CDP</p>
+          <h1>Equipamos espacios de trabajo pensados para durar.</h1>
+          <span>
+            Trabajamos con oficinas, comercios y espacios colaborativos para desarrollar mesas y
+            escritorios funcionales, resistentes y adaptados a cada necesidad.
+          </span>
+          <a class="dark-button" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
+        </div>
+        <img src="public/primeraimagen.JPG" alt="Mesa industrial en proyecto de oficina" />
+      </section>
+
+      <section class="about-stats" aria-label="Datos de proyectos">
+        <div><strong>+10</strong><span>años de experiencia</span></div>
+        <div><strong>100%</strong><span>producción nacional</span></div>
+        <div><strong>+500</strong><span>proyectos realizados</span></div>
+        <div><strong>Miles</strong><span>de espacios equipados</span></div>
       </section>
 
       <footer class="footer home-footer">
@@ -83,16 +69,6 @@
         <p class="copyright">© 2026 Industria CDP. Todos los derechos reservados.</p>
       </footer>
     </main>
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const producto = params.get("producto");
-      const input = document.querySelector("#producto-consulta");
-
-      if (producto && input) {
-        input.value = producto;
-      }
-    </script>
     <script src="nav.js"></script>
-    <script src="form-whatsapp.js"></script>
   </body>
 </html>

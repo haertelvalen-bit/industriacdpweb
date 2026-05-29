@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CDP | Informacion general</title>
+    <title>CDP | Información general</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,22 +15,25 @@
   <body>
     <main>
       <header class="page-header">
-        <a class="brand" href="index.html">CDP</a>
-        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <a class="brand" href="index.html">
+          <img src="public/logo-cdp.svg" alt="CDP" />
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
           <span></span>
           <span></span>
         </button>
-        <nav class="main-nav" aria-label="Navegacion principal">
-          <a href="index.html#productos">Productos</a>
-          <a href="index.html#donde-estamos">Donde estamos</a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="productos.html">Productos</a>
+          <a href="sobre-nosotros.html">Sobre nosotros</a>
           <a href="contacto.html">Contacto</a>
         </nav>
+        <a class="header-quote" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
       </header>
 
       <section class="form-page">
         <a class="back-link" href="contacto.html">Volver</a>
         <form class="contact-form">
-          <h1>Informacion general</h1>
+          <h1>Información general</h1>
           <label>
             Nombre y apellido
             <input type="text" name="Nombre" required />
@@ -50,6 +53,31 @@
           <button type="submit">Enviar por WhatsApp</button>
         </form>
       </section>
+
+      <footer class="footer home-footer">
+        <div>
+          <a class="brand footer-brand" href="index.html"><img src="public/logo-cdp.svg" alt="CDP" /></a>
+          <p>Muebles industriales diseñados y fabricados en Argentina.</p>
+        </div>
+        <nav aria-label="Productos">
+          <strong>Productos</strong>
+          <a href="productos.html#mesas-coworking">Mesas coworking</a>
+          <a href="productos.html#escritorios">Escritorios</a>
+          <a href="productos.html#mesas-de-bar">Mesas de bar</a>
+        </nav>
+        <nav aria-label="Empresa">
+          <strong>Empresa</strong>
+          <a href="sobre-nosotros.html">Sobre nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <nav aria-label="Contacto">
+          <strong>¿Hablamos de tu proyecto?</strong>
+          <a href="https://wa.me/5491140742596" target="_blank" rel="noopener">+54 9 11 4074 2596</a>
+          <a class="instagram-link" href="https://www.instagram.com/industriacdp" target="_blank" rel="noopener">Instagram · @industriacdp</a>
+          <a class="footer-cta" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
+        </nav>
+        <p class="copyright">© 2026 Industria CDP. Todos los derechos reservados.</p>
+      </footer>
     </main>
     <script src="nav.js"></script>
     <script src="form-whatsapp.js"></script>

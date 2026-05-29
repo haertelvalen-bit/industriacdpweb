@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CDP | Productos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header class="page-header">
+        <a class="brand" href="index.html">
+          <img src="public/logo-cdp.svg" alt="CDP" />
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a class="active" href="productos.html">Productos</a>
+          <a href="sobre-nosotros.html">Sobre nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <a class="header-quote" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
+      </header>
+
+      <section class="product-showcase product-showcase-page" id="productos" aria-label="Productos">
+        <div class="product-toolbar" aria-label="Filtros de productos">
+          <div class="category-tabs">
+            <span>Categorías</span>
+            <a class="active" href="productos.html" data-filter="all">Todos los productos</a>
+            <a href="#mesas-coworking" data-filter="coworking">Mesas coworking</a>
+            <a href="#escritorios" data-filter="escritorios">Escritorios</a>
+            <a href="#mesas-de-bar" data-filter="bar">Mesas de bar</a>
+          </div>
+          <div class="finish-filter">
+            <span>Filtrar por acabado</span>
+            <i class="finish natural"></i>
+            <i class="finish walnut"></i>
+            <i class="finish dark"></i>
+            <i class="finish white"></i>
+          </div>
+        </div>
+
+        <div class="product-family large-family" id="mesas-coworking" data-category="coworking">
+          <div class="family-heading">
+            <h3>Mesas coworking</h3>
+          </div>
+          <div class="family-grid coworking-grid">
+            <a class="mini-product-card" href="producto.html?producto=omega">
+              <img src="public/mesas omega/WhatsApp Image 2026-05-27 at 20.58.15.jpeg" alt="Mesa coworking Omega" />
+              <div>
+                <h4>Omega</h4>
+                <p>Patas cerradas</p>
+              </div>
+            </a>
+            <a class="mini-product-card" href="producto.html?producto=prisma">
+              <img src="public/mesas prisma/WhatsApp Image 2026-05-27 at 20.56.53.jpeg" alt="Mesa coworking Prisma" />
+              <div>
+                <h4>Prisma</h4>
+                <p>4 patas</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="split-families">
+          <div class="product-family" id="escritorios" data-category="escritorios">
+            <div class="family-heading">
+              <h3>Escritorios</h3>
+            </div>
+            <div class="family-grid small-grid">
+              <a class="mini-product-card" href="producto.html?producto=escritorio">
+                <img src="public/escritorio1.JPG" alt="Escritorio simple" />
+                <div>
+                  <h4>Escritorio</h4>
+                  <p>Trabajo diario</p>
+                </div>
+              </a>
+              <a class="mini-product-card" href="producto.html?producto=gerencial">
+                <img src="public/gerencialesL.jpeg" alt="Escritorio gerencial" />
+                <div>
+                  <h4>Gerencial</h4>
+                  <p>Línea L</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-family" id="mesas-de-bar" data-category="bar">
+            <div class="family-heading">
+              <h3>Mesas de bar</h3>
+            </div>
+            <div class="family-grid small-grid">
+              <a class="mini-product-card" href="producto.html?producto=delta">
+                <img src="public/delta1.JPG" alt="Mesa de bar Delta" />
+                <div>
+                  <h4>Delta</h4>
+                  <p>Bar y cafetería</p>
+                </div>
+              </a>
+              <a class="mini-product-card" href="producto.html?producto=gamma">
+                <img src="public/gamma1.JPG" alt="Mesa de bar Gamma" />
+                <div>
+                  <h4>Gamma</h4>
+                  <p>Uso comercial</p>
+                </div>
+              </a>
+              <a class="mini-product-card" href="producto.html?producto=sigma">
+                <img src="public/sigma1.jpg" alt="Mesa de bar Sigma" />
+                <div>
+                  <h4>Sigma</h4>
+                  <p>Alta resistencia</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer home-footer">
+        <div>
+          <a class="brand footer-brand" href="index.html"><img src="public/logo-cdp.svg" alt="CDP" /></a>
+          <p>Muebles industriales diseñados y fabricados en Argentina.</p>
+        </div>
+        <nav aria-label="Productos">
+          <strong>Productos</strong>
+          <a href="productos.html#mesas-coworking">Mesas coworking</a>
+          <a href="productos.html#escritorios">Escritorios</a>
+          <a href="productos.html#mesas-de-bar">Mesas de bar</a>
+        </nav>
+        <nav aria-label="Empresa">
+          <strong>Empresa</strong>
+          <a href="sobre-nosotros.html">Sobre nosotros</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <nav aria-label="Contacto">
+          <strong>¿Hablamos de tu proyecto?</strong>
+          <a href="https://wa.me/5491140742596" target="_blank" rel="noopener">+54 9 11 4074 2596</a>
+          <a class="instagram-link" href="https://www.instagram.com/industriacdp" target="_blank" rel="noopener">Instagram · @industriacdp</a>
+          <a class="footer-cta" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
+        </nav>
+        <p class="copyright">© 2026 Industria CDP. Todos los derechos reservados.</p>
+      </footer>
+    </main>
+    <script src="nav.js"></script>
+    <script src="product-filter.js"></script>
+  </body>
+</html>

@@ -15,30 +15,33 @@
   <body>
     <main>
       <header class="page-header">
-        <a class="brand" href="index.html">CDP</a>
-        <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <a class="brand" href="index.html">
+          <img src="public/logo-cdp.svg" alt="CDP" />
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
           <span></span>
           <span></span>
         </button>
-        <nav class="main-nav" aria-label="Navegacion principal">
-          <a href="index.html#productos">Productos</a>
-          <a href="index.html#donde-estamos">Donde estamos</a>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="productos.html">Productos</a>
+          <a href="sobre-nosotros.html">Sobre nosotros</a>
           <a href="contacto.html">Contacto</a>
         </nav>
+        <a class="header-quote" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
       </header>
 
       <section class="catalog-page">
         <div class="catalog-heading">
-          <a href="index.html#productos">Volver</a>
+          <a href="productos.html">Volver</a>
           <div>
-            <p>1 producto</p>
+            <p>2 productos</p>
             <h1>Escritorios</h1>
           </div>
         </div>
 
-        <div class="catalog single-product" aria-label="Escritorios">
+        <div class="catalog" aria-label="Escritorios">
           <article class="catalog-card">
-            <div class="catalog-image product-carousel" data-carousel>
+            <a class="catalog-image product-carousel" data-carousel href="producto.html?producto=escritorio" aria-label="Ver detalle Escritorio">
               <img class="active" src="public/escritorio1.JPG" alt="Escritorio vista 1" />
               <img src="public/escritorio2.JPG" alt="Escritorio vista 2" />
               <img src="public/escritorio3.JPG" alt="Escritorio vista 3" />
@@ -46,35 +49,85 @@
               <span>Disponible</span>
               <button class="carousel-arrow prev" type="button" aria-label="Foto anterior"></button>
               <button class="carousel-arrow next" type="button" aria-label="Foto siguiente"></button>
-            </div>
+            </a>
             <div class="catalog-info">
               <div>
-                <h2>Escritorio</h2>
+                <h2><a href="producto.html?producto=escritorio">Escritorio</a></h2>
                 <p>Base de hierro y tapa de melamina para trabajo diario</p>
               </div>
               <span class="colors">+ colores</span>
             </div>
             <a class="product-consult" href="solicitar-presupuesto.html?producto=Escritorio">Consultar</a>
           </article>
+
+          <article class="catalog-card">
+            <a class="catalog-image product-carousel" data-carousel href="producto.html?producto=gerencial" aria-label="Ver detalle Escritorio gerencial">
+              <img class="active" src="public/gerencialesL.jpeg" alt="Escritorio gerencial vista 1" />
+              <img src="public/gerencialesL2.jpeg" alt="Escritorio gerencial vista 2" />
+              <span>Disponible</span>
+              <button class="carousel-arrow prev" type="button" aria-label="Foto anterior"></button>
+              <button class="carousel-arrow next" type="button" aria-label="Foto siguiente"></button>
+            </a>
+            <div class="catalog-info">
+              <div>
+                <h2><a href="producto.html?producto=gerencial">Escritorio gerencial</a></h2>
+                <p>Diseño gerencial con base de hierro y tapa de melamina</p>
+              </div>
+              <span class="colors">+ colores</span>
+            </div>
+            <a class="product-consult" href="solicitar-presupuesto.html?producto=Escritorio%20gerencial">Consultar</a>
+          </article>
         </div>
       </section>
 
-      <footer class="footer">
+      <section class="product-details" aria-label="Información técnica de escritorios">
+        <h2>Información general</h2>
+        <p class="details-intro">
+          Escritorios para oficinas, estudios, espacios de home office y puestos gerenciales que
+          requieren una superficie cómoda y resistente.
+        </p>
+
+        <h3>Estructura</h3>
+        <p>
+          Base de hierro con terminación resistente, pensada para mantener estabilidad en el uso
+          diario.
+        </p>
+
+        <h3>Superficie de trabajo</h3>
+        <p>
+          Tapa de melamina práctica para computadora, documentación y accesorios de oficina.
+        </p>
+
+        <h3>Opciones</h3>
+        <p>
+          Se puede consultar por medidas, colores y configuraciones según el ambiente donde se va a
+          instalar.
+        </p>
+      </section>
+
+      <footer class="footer home-footer">
         <div>
-          <strong>CDP</strong>
-          <p>Mesas para coworking, escritorios y espacios de bar.</p>
+          <a class="brand footer-brand" href="index.html"><img src="public/logo-cdp.svg" alt="CDP" /></a>
+          <p>Muebles industriales diseñados y fabricados en Argentina.</p>
         </div>
         <nav aria-label="Productos">
-          <a href="coworking.html">Mesas coworking</a>
-          <a href="escritorios.html">Escritorios</a>
-          <a href="bar.html">Mesas de bar</a>
+          <strong>Productos</strong>
+          <a href="productos.html#mesas-coworking">Mesas coworking</a>
+          <a href="productos.html#escritorios">Escritorios</a>
+          <a href="productos.html#mesas-de-bar">Mesas de bar</a>
         </nav>
-        <nav aria-label="Contacto">
-          <a href="tel:0034652183235">0034 652 18 32 35</a>
-          <a href="mailto:hola@mesaspapa.com">hola@mesaspapa.com</a>
+        <nav aria-label="Empresa">
+          <strong>Empresa</strong>
+          <a href="sobre-nosotros.html">Sobre nosotros</a>
           <a href="contacto.html">Contacto</a>
         </nav>
-        <p class="copyright">© 2026 CDP. Todos los derechos reservados.</p>
+        <nav aria-label="Contacto">
+          <strong>¿Hablamos de tu proyecto?</strong>
+          <a href="https://wa.me/5491140742596" target="_blank" rel="noopener">+54 9 11 4074 2596</a>
+          <a class="instagram-link" href="https://www.instagram.com/industriacdp" target="_blank" rel="noopener">Instagram · @industriacdp</a>
+          <a class="footer-cta" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
+        </nav>
+        <p class="copyright">© 2026 Industria CDP. Todos los derechos reservados.</p>
       </footer>
     </main>
     <script src="nav.js"></script>
