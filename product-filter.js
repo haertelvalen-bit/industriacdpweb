@@ -7,19 +7,22 @@ document.querySelectorAll(".product-showcase").forEach((showcase) => {
     return;
   }
 
+  let activeCategory = "all";
+
   const hashFilters = {
     "#mesas-coworking": "coworking",
     "#escritorios": "escritorios",
     "#mesas-de-bar": "bar",
   };
 
-  const applyFilter = (filter) => {
+  const applyFilter = () => {
     tabs.forEach((tab) => {
-      tab.classList.toggle("active", tab.dataset.filter === filter);
+      tab.classList.toggle("active", tab.dataset.filter === activeCategory);
     });
 
     families.forEach((family) => {
-      family.classList.toggle("is-hidden", filter !== "all" && family.dataset.category !== filter);
+      const categoryMatches = activeCategory === "all" || family.dataset.category === activeCategory;
+      family.classList.toggle("is-hidden", !categoryMatches);
     });
 
     splitGroups.forEach((group) => {
@@ -40,7 +43,8 @@ document.querySelectorAll(".product-showcase").forEach((showcase) => {
       }
 
       event.preventDefault();
-      applyFilter(filter);
+      activeCategory = filter;
+      applyFilter();
 
       if (filter === "all") {
         history.replaceState(null, "", tab.pathname.endsWith("/productos.html") ? "productos.html" : "#productos");
@@ -54,5 +58,6 @@ document.querySelectorAll(".product-showcase").forEach((showcase) => {
     });
   });
 
-  applyFilter(hashFilters[window.location.hash] || "all");
+  activeCategory = hashFilters[window.location.hash] || "all";
+  applyFilter();
 });

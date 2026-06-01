@@ -23,4 +23,6 @@ document.querySelectorAll("[data-product-gallery]").forEach((gallery) => {
 
   previous?.addEventListener("click", () => show(current - 1));
   next?.addEventListener("click", () => show(current + 1));
+
+  show(current);
 });

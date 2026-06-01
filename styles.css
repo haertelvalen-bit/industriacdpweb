@@ -573,7 +573,8 @@ a {
 }
 
 .product-family.is-hidden,
-.split-families.is-hidden {
+.split-families.is-hidden,
+.mini-product-card.is-hidden {
   display: none;
 }
 
@@ -581,8 +582,19 @@ a {
   display: block;
   width: 34px;
   height: 34px;
+  padding: 0;
   border: 1px solid rgba(43, 44, 48, 0.18);
   border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+
+.finish:hover {
+  transform: translateY(-1px);
+}
+
+.finish.active {
+  box-shadow: 0 0 0 3px var(--surface), 0 0 0 5px var(--accent);
 }
 
 .finish.natural {
@@ -674,6 +686,11 @@ a {
   object-fit: cover;
 }
 
+.mini-product-card img.contain-image {
+  object-fit: contain;
+  background: var(--soft);
+}
+
 .mini-product-card div {
   padding: 18px 20px 20px;
 }
@@ -706,8 +723,8 @@ a {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 28px;
-  margin: 0 clamp(24px, 6vw, 78px) 74px;
-  padding: 46px;
+  margin: 0 0 74px;
+  padding: 46px clamp(24px, 6vw, 78px);
   background: var(--soft);
 }
 
@@ -922,6 +939,7 @@ a {
 }
 
 .about-story img,
+.about-story-video,
 .about-purpose img {
   display: block;
   width: 100%;
@@ -1161,6 +1179,11 @@ a {
   display: block;
 }
 
+.catalog-image.contain-image img {
+  object-fit: contain;
+  background: var(--soft);
+}
+
 .product-carousel img {
   position: absolute;
   inset: 0;
@@ -1395,6 +1418,20 @@ a {
   transition: opacity 180ms ease;
 }
 
+.product-main-image.contain-image {
+  aspect-ratio: 4 / 3;
+  background-color: var(--soft);
+}
+
+.product-main-image.contain-image img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-main-image.contain-image img.active {
+  opacity: 1;
+}
+
 .product-main-image img.active {
   opacity: 1;
 }
@@ -1479,6 +1516,11 @@ a {
   object-fit: cover;
 }
 
+.product-thumbs img.contain-image {
+  object-fit: contain;
+  background: var(--soft);
+}
+
 .product-summary h1 {
   margin: 0;
   font-size: clamp(3rem, 4.7vw, 5.2rem);
@@ -1553,13 +1595,16 @@ a {
   border: 1px solid var(--line);
   color: var(--text);
   background: var(--surface);
+  cursor: pointer;
   font: inherit;
   font-size: 0.9rem;
   font-weight: 300;
+  transition: border-color 160ms ease, background 160ms ease;
 }
 
-.measure-options button:first-child {
+.measure-options button.active {
   border-color: var(--text);
+  background: var(--soft);
 }
 
 .detail-swatches {
@@ -2033,8 +2078,8 @@ a {
   }
 
   .home-values {
-    margin: 0 24px 56px;
-    padding: 32px;
+    margin: 0 0 56px;
+    padding: 32px 24px;
   }
 
   .home-about img {
