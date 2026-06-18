@@ -16,6 +16,8 @@ document.querySelectorAll(".product-showcase").forEach((showcase) => {
   };
 
   const applyFilter = () => {
+    showcase.classList.toggle("is-filter-bar", activeCategory === "bar");
+
     tabs.forEach((tab) => {
       tab.classList.toggle("active", tab.dataset.filter === activeCategory);
     });
