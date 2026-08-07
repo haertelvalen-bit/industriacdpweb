@@ -2,7 +2,7 @@ const products = {
   omega: {
     name: "Omega",
     category: "Mesas coworking",
-    categoryUrl: "productos.html#mesas-coworking",
+    categoryUrl: "coworking.html",
     label: "Tarifa empresas",
     description:
       "Mesa de coworking con patas cerradas. Amplia, resistente y funcional para oficinas, estudios y espacios de trabajo compartido.",
@@ -15,12 +15,11 @@ const products = {
       "public/mesas omega/omega-horizontal-6.png",
     ],
     containImages: true,
-    measures: ["180 x 90 cm", "200 x 100 cm", "240 x 100 cm", "300 x 120 cm"],
   },
   prisma: {
     name: "Prisma",
     category: "Mesas coworking",
-    categoryUrl: "productos.html#mesas-coworking",
+    categoryUrl: "coworking.html",
     label: "Tarifa empresas",
     description:
       "Mesa de coworking de 4 patas con base de hierro y tapa de melamina. Una solución simple, firme y adaptable para espacios colaborativos.",
@@ -33,12 +32,11 @@ const products = {
       "public/mesas prisma/horizontal/prisma-horizontal-6.png",
       "public/mesas prisma/horizontal/prisma-horizontal-7.png",
     ],
-    measures: ["180 x 90 cm", "200 x 100 cm", "240 x 100 cm", "300 x 120 cm"],
   },
   escritorio: {
     name: "Escritorio",
     category: "Escritorios",
-    categoryUrl: "productos.html#escritorios",
+    categoryUrl: "escritorios.html",
     label: "Disponible",
     description:
       "Escritorio de uso diario con base de hierro y tapa de melamina. Pensado para oficinas, estudios y espacios de home office.",
@@ -48,12 +46,11 @@ const products = {
       "public/escritorios-horizontal/escritorio-horizontal-3.JPG",
       "public/escritorios-horizontal/escritorio-horizontal-4.JPG",
     ],
-    measures: ["120 x 60 cm", "140 x 60 cm", "160 x 60 cm"],
   },
   gerencial: {
     name: "Escritorio gerencial",
     category: "Escritorios",
-    categoryUrl: "productos.html#escritorios",
+    categoryUrl: "escritorios.html",
     label: "Disponible",
     description:
       "Escritorio gerencial con base de hierro y tapa de melamina. Mayor presencia visual y superficie cómoda para espacios de dirección.",
@@ -61,12 +58,11 @@ const products = {
       "public/gerenciales-horizontal/gerencial-horizontal-1.png",
       "public/gerenciales-horizontal/gerencial-horizontal-2.jpeg",
     ],
-    measures: ["160 x 70 cm", "180 x 80 cm", "200 x 80 cm"],
   },
   delta: {
     name: "Delta",
     category: "Mesas de bar",
-    categoryUrl: "productos.html#mesas-de-bar",
+    categoryUrl: "bar.html",
     label: "Disponible",
     description:
       "Mesa de bar con base de hierro y tapa de melamina. Resistente, práctica y pensada para espacios comerciales de uso frecuente.",
@@ -75,12 +71,11 @@ const products = {
       "public/delta/delta-horizontal-2.png",
     ],
     containImages: true,
-    measures: ["120 x 60 x 105 cm", "160 x 60 x 105 cm", "180 x 70 x 105 cm"],
   },
   gamma: {
     name: "Gamma",
     category: "Mesas de bar",
-    categoryUrl: "productos.html#mesas-de-bar",
+    categoryUrl: "bar.html",
     label: "Disponible",
     description:
       "Mesa de bar con estructura de hierro y tapa de melamina. Ideal para cafeterías, barras y zonas de encuentro.",
@@ -89,12 +84,11 @@ const products = {
       "public/bar-horizontal/gamma-horizontal-2.png",
       "public/bar-horizontal/gamma-horizontal-3.png",
     ],
-    measures: ["120 x 60 x 105 cm", "160 x 60 x 105 cm", "180 x 70 x 105 cm"],
   },
   sigma: {
     name: "Sigma",
     category: "Mesas de bar",
-    categoryUrl: "productos.html#mesas-de-bar",
+    categoryUrl: "bar.html",
     label: "Disponible",
     description:
       "Mesa de bar robusta con base de hierro y tapa de melamina. Diseñada para acompañar ambientes dinámicos y de alto tránsito.",
@@ -103,7 +97,6 @@ const products = {
       "public/bar-horizontal/sigma-horizontal-2.png",
       "public/bar-horizontal/sigma-horizontal-3.png",
     ],
-    measures: ["120 x 60 x 105 cm", "160 x 60 x 105 cm", "180 x 70 x 105 cm"],
   },
 };
 
@@ -117,7 +110,7 @@ const finishes = [
   { key: "dark", label: "Oscuro" },
   { key: "white", label: "Blanco" },
 ];
-let selectedMeasure = product.measures[0];
+let selectedMeasure = "a medida";
 let selectedFinish = finishes[0].label;
 
 document.title = `CDP | ${product.name}`;
@@ -125,7 +118,7 @@ document.title = `CDP | ${product.name}`;
 document.querySelector("[data-breadcrumb]").innerHTML = `
   <a href="index.html">Inicio</a>
   <span>/</span>
-  <a href="productos.html">Productos</a>
+  <a href="index.html#colecciones">Productos</a>
   <span>/</span>
   <a href="${product.categoryUrl}">${product.category}</a>
   <span>/</span>
@@ -176,12 +169,8 @@ document.querySelector("[data-product-features]").innerHTML = `
     <p>Opcional</p>
   </div>
 `;
-document.querySelector("[data-product-measures]").innerHTML = product.measures
-  .map(
-    (measure, index) =>
-      `<button${index === 0 ? ' class="active" aria-pressed="true"' : ' aria-pressed="false"'} type="button" data-measure="${measure}">${measure}</button>`,
-  )
-  .join("");
+document.querySelector("[data-product-measures]").innerHTML =
+  `<p>Fabricamos este modelo en las medidas que necesites para tu espacio. <a href="solicitar-presupuesto.html?producto=${encodedName}">Consultá por tu medida</a>.</p>`;
 document.querySelector("[data-product-finishes]").innerHTML = finishes
   .map(
     (finish, index) =>
@@ -192,7 +181,6 @@ document.querySelector("[data-product-finishes]").innerHTML = finishes
 const budgetLink = document.querySelector("[data-budget-link]");
 const quoteLink = document.querySelector("[data-quote-link]");
 const whatsappLink = document.querySelector("[data-whatsapp-link]");
-const measureButtons = [...document.querySelectorAll("[data-product-measures] button")];
 const finishButtons = [...document.querySelectorAll("[data-product-finishes] button")];
 
 function updateContactLinks() {
@@ -207,20 +195,6 @@ function updateContactLinks() {
   quoteLink.href = `solicitar-presupuesto.html?producto=${productQuery}`;
   whatsappLink.href = `https://wa.me/5491144959533?text=${message}`;
 }
-
-measureButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    selectedMeasure = button.dataset.measure;
-
-    measureButtons.forEach((item) => {
-      const isActive = item === button;
-      item.classList.toggle("active", isActive);
-      item.setAttribute("aria-pressed", String(isActive));
-    });
-
-    updateContactLinks();
-  });
-});
 
 finishButtons.forEach((button) => {
   button.addEventListener("click", () => {

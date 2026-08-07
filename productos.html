@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CDP | Productos</title>
+    <script>window.location.replace("index.html#colecciones");</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,90 +31,15 @@
         <a class="header-quote" href="solicitar-presupuesto.html">Cotizá tu proyecto</a>
       </header>
 
-      <section class="product-showcase product-showcase-page" id="productos" aria-label="Productos">
-        <div class="product-toolbar" aria-label="Filtros de productos">
-          <div class="category-tabs">
-            <span>Categorías</span>
-            <a class="active" href="productos.html" data-filter="all">Todos los productos</a>
-            <a href="#mesas-coworking" data-filter="coworking">Mesas coworking</a>
-            <a href="#escritorios" data-filter="escritorios">Escritorios</a>
-            <a href="#mesas-de-bar" data-filter="bar">Mesas de bar</a>
-          </div>
+      <section class="collection-index" aria-label="Colecciones">
+        <div class="collection-index-heading">
+          <p>COLECCIONES CDP</p>
+          <h1>Elegí la línea que<br />mejor acompaña tu <em>espacio.</em></h1>
         </div>
-
-        <div class="product-family large-family" id="mesas-coworking" data-category="coworking">
-          <div class="family-heading">
-            <h3>Mesas coworking</h3>
-          </div>
-          <div class="family-grid coworking-grid">
-            <a class="mini-product-card" href="producto.html?producto=omega" data-finishes="natural walnut dark white">
-              <img src="public/mesas omega/omega-horizontal-1.png" alt="Mesa coworking Omega" />
-              <div>
-                <h4>Omega</h4>
-                <p>Patas cerradas</p>
-              </div>
-            </a>
-            <a class="mini-product-card" href="producto.html?producto=prisma" data-finishes="natural walnut dark white">
-              <img src="public/mesas prisma/horizontal/prisma-horizontal-1.png" alt="Mesa coworking Prisma" />
-              <div>
-                <h4>Prisma</h4>
-                <p>4 patas</p>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="split-families">
-          <div class="product-family" id="escritorios" data-category="escritorios">
-            <div class="family-heading">
-              <h3>Escritorios</h3>
-            </div>
-            <div class="family-grid small-grid">
-              <a class="mini-product-card" href="producto.html?producto=escritorio" data-finishes="white">
-                <img src="public/escritorios-horizontal/escritorio-horizontal-1.png" alt="Escritorio simple" />
-                <div>
-                  <h4>Escritorio</h4>
-                  <p>Trabajo diario</p>
-                </div>
-              </a>
-              <a class="mini-product-card" href="producto.html?producto=gerencial" data-finishes="white">
-                <img src="public/gerenciales-horizontal/gerencial-horizontal-1.png" alt="Escritorio gerencial" />
-                <div>
-                  <h4>Gerencial</h4>
-                  <p>Línea L</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="product-family" id="mesas-de-bar" data-category="bar">
-            <div class="family-heading">
-              <h3>Mesas de bar</h3>
-            </div>
-            <div class="family-grid small-grid">
-              <a class="mini-product-card" href="producto.html?producto=delta" data-finishes="natural white">
-                <img src="public/delta/delta-horizontal-1.png" alt="Mesa de bar Delta" />
-                <div>
-                  <h4>Delta</h4>
-                  <p>Bar y cafetería</p>
-                </div>
-              </a>
-              <a class="mini-product-card" href="producto.html?producto=gamma" data-finishes="natural dark white">
-                <img src="public/bar-horizontal/gamma-horizontal-1.png" alt="Mesa de bar Gamma" />
-                <div>
-                  <h4>Gamma</h4>
-                  <p>Uso comercial</p>
-                </div>
-              </a>
-              <a class="mini-product-card" href="producto.html?producto=sigma" data-finishes="natural walnut dark white">
-                <img src="public/bar-horizontal/sigma-horizontal-1.png" alt="Mesa de bar Sigma" />
-                <div>
-                  <h4>Sigma</h4>
-                  <p>Alta resistencia</p>
-                </div>
-              </a>
-            </div>
-          </div>
+        <div class="collection-index-grid">
+          <a href="coworking.html"><img src="public/mesas omega/omega-horizontal-6.png" alt="Mesas coworking" /><div><span>01 · COLECCIÓN</span><h2>Mesas coworking</h2><p>Omega y Prisma</p><b>Ver colección →</b></div></a>
+          <a href="escritorios.html"><img src="public/escritorios-horizontal/escritorio-horizontal-1.png" alt="Escritorios" /><div><span>02 · COLECCIÓN</span><h2>Escritorios</h2><p>Simple y gerencial</p><b>Ver colección →</b></div></a>
+          <a href="bar.html"><img src="public/bar-horizontal/gamma-horizontal-1.png" alt="Mesas de bar" /><div><span>03 · COLECCIÓN</span><h2>Mesas de bar</h2><p>Delta, Gamma y Sigma</p><b>Ver colección →</b></div></a>
         </div>
       </section>
 
@@ -143,6 +69,5 @@
       </footer>
     </main>
     <script src="nav.js"></script>
-    <script src="product-filter.js"></script>
   </body>
 </html>
